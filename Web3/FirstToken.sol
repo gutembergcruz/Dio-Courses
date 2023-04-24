@@ -49,7 +49,7 @@ contract ApproveAndCallFallBack {
  
 //Actual token contract
  
-contract DIOToken is ERC20Interface, SafeMath {
+contract BERGToken is ERC20Interface, SafeMath {
     string public symbol;
     string public  name;
     uint8 public decimals;
@@ -59,10 +59,10 @@ contract DIOToken is ERC20Interface, SafeMath {
     mapping(address => mapping(address => uint)) allowed;
  
     constructor() public {
-        symbol = "DIO";
-        name = "DIO Coin";
+        symbol = BRG";
+        name = "BRG Coin";
         decimals = 2;
-        _totalSupply = 100000;
+        _totalSupply = 200000;
         balances[YOUR_METAMASK_WALLET_ADDRESS] = _totalSupply;
         emit Transfer(address(0), YOUR_METAMASK_WALLET_ADDRESS, _totalSupply);
     }
