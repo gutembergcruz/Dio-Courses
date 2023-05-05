@@ -1,17 +1,21 @@
-class User {
-  name: string = "Gute";
-  age: number = 26;
+class Account {
+  name: string;
+  accountNumber: number;
 
-  constructor(name: string, age: number) {
+  constructor(name: string, accountNumber: number) {
     this.name = name;
-    this.age = age;
+    this.accountNumber = accountNumber;
   }
 
-  showName = () => {
-    console.log(this.name);
+  deposit = () => {
+    console.log("Você depositou");
+  };
+
+  withdraw = () => {
+    console.log("Você sacou");
   };
 }
 
-const user = new User("Gutemberg", 27);
+const newAccount: Account = new Account("Gute", 1);
 
-user.showName();
+newAccount.withdraw();
