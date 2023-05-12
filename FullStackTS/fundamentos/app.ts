@@ -1,21 +1,17 @@
-class Account {
-  name: string;
-  accountNumber: number;
+import { CompanyAccount } from "./class/CompanyAccount";
+import { NewTypeAccount } from "./class/NewTypeAccount";
+import { PeopleAccount } from "./class/PeopleAccount";
 
-  constructor(name: string, accountNumber: number) {
-    this.name = name;
-    this.accountNumber = accountNumber;
-  }
+// const peopleAccount: PeopleAccount = new PeopleAccount(1, "Gute", 10);
+// peopleAccount.deposit(25);
+// console.log(peopleAccount.balance);
+// peopleAccount.withdraw(20);
+// console.log(peopleAccount.balance);
 
-  deposit = () => {
-    console.log("Você depositou");
-  };
+// const companyAccount: CompanyAccount = new CompanyAccount("DIO", 20);
+// companyAccount.getLoan(500);
+// console.log(companyAccount.balance);
 
-  withdraw = () => {
-    console.log("Você sacou");
-  };
-}
-
-const newAccount: Account = new Account("Gute", 1);
-
-newAccount.withdraw();
+const myAccount: NewTypeAccount = new NewTypeAccount("Nova", 21);
+myAccount.deposit(50);
+console.log(myAccount.balance);
